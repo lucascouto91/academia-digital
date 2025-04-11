@@ -8,3 +8,5 @@ spring:
     show-sql: true        # vai mostrar no log o sql.
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate.format_sql: true
