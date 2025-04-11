@@ -32,7 +32,8 @@ public class Aluno {
 
   private LocalDate dataDeNascimento;
 
-  @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)   // Um aluno vai ter muitas avaliações.
+  // Um aluno vai ter muitas avaliações.// Lazy, quando listar aluno, não vai listar Avaliações.
+  @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
   @JsonIgnore
   private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
 
