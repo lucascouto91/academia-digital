@@ -1,13 +1,13 @@
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/academia
+    url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
     username: postgres
     password: postgres
   jpa:
     show-sql: true        # vai mostrar no log o sql.
     hibernate:
-      ddl-auto: update
+      ddl-auto: update   # drop, update
     properties:
       hibernate.format_sql: true
 
